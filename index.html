@@ -1,9 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <title>tdd todo</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="todo list">
+  <title>To-Do List by KHOL</title>
   <link rel="stylesheet" href="./style.css">
 </head>
 
@@ -15,14 +18,17 @@
       <span class="yellow">&bullet;</span> L
     </h1>
   </header>
-  <div id="todo-container">
-    <ul>
-    </ul>
-  </div>
-  <form id="add-todo">
-    <input type="text" name="description" value="">
-    <input type="submit" name="" value="Submit">
-  </form>
+  <section>
+    <h2>Things to-do:</h2>
+    <div id="todo-container" class="main-todo">
+      <ul>
+      </ul>
+    </div>
+    <form id="add-todo">
+      <input class="task-input-box" type="text" name="description" placeholder="New task..." value="">
+      <input class="add-button" type="submit" name="" value="Add">
+    </form>
+  </section>
 </body>
 <script type="text/javascript" src="./logic.js"></script>
 <script type="text/javascript" src="./dom.js"></script>
