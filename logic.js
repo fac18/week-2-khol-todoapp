@@ -3,6 +3,7 @@
 // you can access these on todo.todoFunctions
 // For part one we expect you to use tdd
 
+
 var todoFunctions = {
     // todoFunctions.generateId() will give you a unique id
     // You do not need to understand the implementation of this function.
@@ -23,12 +24,24 @@ var todoFunctions = {
         return JSON.parse(JSON.stringify(todo));
       });
     },
+
+    
+    double: function(num) {
+      return num * 2;
+    },
+
     
     addTodo: function(todos, newTodo) {
+      newTodo.id = todoFunctions.generateId();
+      let newArr = todoFunctions.cloneArrayOfObjects(todos);
+      console.log(newArr);
+      return newArr.concat(newTodo);
       // should leave the input argument todos unchanged (you can use cloneArrayOfObjects)
       // returns a new array, it should contain todos with the newTodo added to the end.
       // add an id to the newTodo. You can use the generateId function to create an id.
       // hint: array.concat
+      
+
     },
     deleteTodo: function(todos, idToDelete) {
       // should leave the input argument todos unchanged (you can use cloneArrayOfObjects)
