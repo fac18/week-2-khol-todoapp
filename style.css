@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css?family=Mansalva|Quicksand&display=swap');
+body {
+  background-color: #6ecc82;
+  text-align: center;
+  align-content: center;
+}
+
+h1 {
+  font-family: 'Mansalva', cursive;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.2);
+  font-size: 5rem;
+}
+
+.red {
+  color: #be4848;
+}
+
+.blue {
+  color: #639bc9;
+}
+
+.yellow {
+  color: #eaec69;
+}
+
+ul {
+  list-style-type: none;
+}
