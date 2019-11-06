@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/fac18/week-2-khol-todoapp/issues"
   },
-  "homepage": "https://github.com/fac18/week-2-khol-todoapp#readme"
+  "homepage": "https://github.com/fac18/week-2-khol-todoapp#readme",
+  "devDependencies": {
+    "tap-spec": "^5.0.0",
+    "tape": "^4.11.0"
+  }
 }
