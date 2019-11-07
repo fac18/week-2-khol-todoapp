@@ -34,7 +34,6 @@ var todoFunctions = {
     addTodo: function(todos, newTodo) {
       newTodo.id = todoFunctions.generateId();
       let newArr = todoFunctions.cloneArrayOfObjects(todos);
-      console.log(newArr);
       return newArr.concat(newTodo);
       // should leave the input argument todos unchanged (you can use cloneArrayOfObjects)
       // returns a new array, it should contain todos with the newTodo added to the end.
