@@ -146,3 +146,45 @@ test('checks idToDelete', function(t) {
   t.deepEqual(actual, expected, 'should return a new version without afecting the old obj');
   t.end();
 })
+
+let arrayToFilter = [
+  {
+    description: 'Go to the shops',
+    done: false,
+    id: 1
+  },
+  {
+    description: 'Make tea for Jamie',
+    done: true,
+    id: 2
+  },
+  {
+    description: 'Text Nikke',
+    done: true,
+    id: 3
+  }
+];
+
+let filterThis = {
+    description: 'Make tea for Jamie',
+    done: true,
+    id: 2
+}
+
+test('checks idToDelete ids', function(t) {
+  let expected = [
+    {
+      description: 'Go to the shops',
+      done: false,
+      id: 1
+    },
+    {
+      description: 'Text Nikke',
+      done: true,
+      id: 3
+    }
+  ];  
+  let actual = todoFunctions.deleteTodo(arrayToFilter, 2);
+  t.deepEqual(actual, expected, 'idToDelete should filter the ids to not be equal');
+  t.end();
+})
