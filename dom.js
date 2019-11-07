@@ -20,15 +20,35 @@
 
       todoNode.appendChild(span);
 
+      // add markTodo button
+      let markTodoButton = document.createElement("button");
+      if(todo.done){
+          markTodoButton.classList.add('marked');
+          span.setAttribute("style", "text-decoration: line-through;")
+        } else {
+          markTodoButton.classList.add('unmarked');
+        }
+      markTodoButton.addEventListener("click", function(event){
+        var newState = todoFunctions.markTodo(state, todo.id);
+        update(newState);
+      });
+      todoNode.appendChild(markTodoButton);
+
       // R
       // todoNode.textContent = todo.description;
-      // let check = document.createElement("button");
-      // if (todo.done) {
-      //     check.classList.add('marked');
+      // let markTodoButtonNode = document.createElement("button");
+      // markTodoButtonNode.addEventListener('click', function(event) {
+      //   let newState = todoFunctions.markTodo(state, todo.id);
+      //   update(newState);
+      //   if (todo.done) {
+      //     markTodoButtonNode.classList.add('.marked');
+      //     markTodoButtonNode.setAttribute("aria-label", "Mark as not done");
+      //     todoSpan.style.textDecoration = "line-through";
       //   } else {
-      //     check.classList.add('unmarked');
+      //     markTodoButtonNode.classList.add('.unmarked');
       //   }
-      // todoNode.appendChild(check);
+      // });
+      // todoNode.appendChild(markTodoButtonNode);
       
       // J
       // add markTodo button
