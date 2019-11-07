@@ -12,7 +12,7 @@ To-do app
 * Navigation button for About
 * A contact form at the bottom of the page.
 
-## Yhe purpose of the to-do app:
+## The purpose of the to-do app:
  - Use TDD  and understand in order to test our logic.
  - Render the to-do list to the DOM
  - Use CSS to make it look good.
@@ -23,6 +23,28 @@ To-do app
 - Mark tasks as complete so that I can focus on the tasks I have left 
 
 ![hard day](https://media.giphy.com/media/hrk8ehR4lCZ27FtjPA/giphy.gif)
+
+## get started:
+
+1) clone our repo
+2) run npm install
+
+```
+npm install
+```
+
+3) install Tape so that you can run your tests. 
+
+``` npm i -D tape ``` and ``` npm i -D tap-spec ```
+
+4) run npm test 
+
+```
+npm test
+```
+
+
+
 
 ### Our stretch goals 
 - We were not able to achieve any of our stretch goals
