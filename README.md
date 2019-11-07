@@ -35,6 +35,7 @@ To-do app
  ### what we struggled with: 
  - At first we were unable to pass 1 test and that was for the markTodo.
  - we all struggled with the rendering the DOM, which meant we ran out of time to make the markTodo function work. 
+ - we should have made it responsive.
   
   
  
