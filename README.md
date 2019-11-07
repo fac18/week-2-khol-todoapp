@@ -41,7 +41,7 @@ To-do app
  
 ### Accessibility screenshot:
 
-![images](img/khol-to-do-list.png)
+![images](img/accessibility.png)
   
  
 
