@@ -9,8 +9,9 @@ To-do app
  
  ## Contents: 
 * Tests for each function, 
-* Navigation button for About
-* A contact form at the bottom of the page.
+* View your additions
+* mark tasks as complete 
+* delete any object you added.
 
 ## The purpose of the to-do app:
  - Use TDD  and understand in order to test our logic.
