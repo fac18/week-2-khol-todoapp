@@ -37,11 +37,11 @@ To-do app
  ### What we struggled with: 
  - At first we were unable to pass 1 test and that was for the markTodo.
  - We all struggled with the rendering the DOM, which meant we ran out of time to make the markTodo function work. 
- - We should have made it more responsive
+ - We should have made it more responsive.
+ 
+### Accessibility screenshot:
 
-### Accessibility screenshot:
-
-![images](img/khol-to-list.png)
+![images](img/khol-to-do-list.png)
   
  
 
