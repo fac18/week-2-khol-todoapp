@@ -1,6 +1,23 @@
 var test = require('tape');
 var todoFunctions = require('./logic');
 
+test('Example test', function(t) {
+  t.pass();
+  t.end();
+});
+
+test('doubles value', function(t) {
+  let expected = 6;
+  let actual = todoFunctions.double(3);
+  t.equal(actual, expected, 'the number should be 6');
+  t.end();
+})
+
+// Instead of expecting the added item to display a fresh id - eg 4, assume that
+// as it is the first ADDED item it will have id of 1
+// This is because the generate id function is called only on NEW items
+// and not on our fake populated object list.
+
 let testArray = [
   {
     description: 'Go to the shops',
@@ -24,55 +41,6 @@ let newObj = {
   done: false,
   id: null
 };
-
-let noIds = [];
-
-let newObjId = {
-  description: 'Say hi Ayub',
-  done: false,
-  id: null
-};
-
-let deleteTest = [
-  {
-    description: 'Go to the shops',
-    done: false,
-    id: 1
-  },
-  {
-    description: 'Make tea for Jamie',
-    done: false,
-    id: 2
-  },
-  {
-    description: 'Text Nikke',
-    done: true,
-    id: 3
-  }
-];
-
-let deleteObj = {
-  description: 'Text Nikke again',
-  done: true,
-  id: 3
-};
-
-test('Example test', function(t) {
-  t.pass();
-  t.end();
-});
-
-test('doubles value', function(t) {
-  let expected = 6;
-  let actual = todoFunctions.double(3);
-  t.equal(actual, expected, 'the number should be 6');
-  t.end();
-})
-
-// Instead of expecting the added item to display a fresh id - eg 4, assume that
-// as it is the first ADDED item it will have id of 1
-// This is because the generate id function is called only on NEW items
-// and not on our fake populated object list.
 
 test('returns testArray with an additional item', function(t) {
   let expected = [
@@ -110,6 +78,14 @@ test('returns testArray with an additional item', function(t) {
 // For whatever reason the generate id function reiterates on each test so the expected id is 2...
 // This is fine as we can expect to add new items from zero, so the function should work properly?
 
+let noIds = [];
+
+let newObjId = {
+  description: 'Say hi Ayub',
+  done: false,
+  id: null
+};
+
 test('adds an id to each item', function(t) {
   let expected = [
       {
@@ -123,6 +99,30 @@ test('adds an id to each item', function(t) {
   t.deepEqual(actual, expected, 'addTodo add an id to each item');
   t.end();
 })
+
+let deleteTest = [
+  {
+    description: 'Go to the shops',
+    done: false,
+    id: 1
+  },
+  {
+    description: 'Make tea for Jamie',
+    done: false,
+    id: 2
+  },
+  {
+    description: 'Text Nikke',
+    done: true,
+    id: 3
+  }
+];
+
+let deleteObj = {
+  description: 'Text Nikke again',
+  done: true,
+  id: 3
+};
 
 test('checks idToDelete', function(t) {
   let expected = [
@@ -186,5 +186,76 @@ test('checks idToDelete ids', function(t) {
   ];  
   let actual = todoFunctions.deleteTodo(arrayToFilter, 2);
   t.deepEqual(actual, expected, 'idToDelete should filter the ids to not be equal');
+  t.end();
+})
+
+
+let arrayToMark = [
+  {
+    description: 'Go to the shops',
+    done: false,
+    id: 1
+  },
+  {
+    description: 'Make tea for Jamie',
+    done: false,
+    id: 2
+  },
+  {
+    description: 'Text Nikke',
+    done: false,
+    id: 3
+  }
+];
+
+let markThis = {
+  description: 'Make tea for Jamie',
+  done: false,
+  id: 2
+}
+
+test('checks markTodo versions', function(t) {
+  let expected = [
+    {
+      description: 'Go to the shops',
+      done: false,
+      id: 1
+    },
+    {
+      description: 'Make tea for Jamie',
+      done: false,
+      id: 2
+    },
+    {
+      description: 'Text Nikke',
+      done: false,
+      id: 3
+    }
+  ];
+  let actual = todoFunctions.deleteTodo(arrayToMark);
+  t.deepEqual(actual, expected, 'markTodo array should return a new version of the arr');
+  t.end();
+})
+
+test('checks markTodo ids', function(t) {
+  let expected = [
+    {
+      description: 'Go to the shops',
+      done: false,
+      id: 1
+    },
+    {
+      description: 'Make tea for Jamie',
+      done: true,
+      id: 2
+    },
+    {
+      description: 'Text Nikke',
+      done: false,
+      id: 3
+    }
+  ];
+  let actual = todoFunctions.deleteTodo(arrayToMark, markThis);
+  t.deepEqual(actual, expected, 'markTodo array should return unchanged elem except the id: idToMark');
   t.end();
 })
