@@ -3,7 +3,7 @@ To-do app
 
 
 ## Team:
- * [Ayub](https://github.com/Ayub3). 
+ * [Ayub](https://github.com/Ayub3) 
  * [Jamie](https://github.com/jc282)
  * [Nikke](https://github.com/nikkesan)
  * [Renata](https://github.com/renatajarmova)
@@ -31,11 +31,12 @@ To-do app
   - understood the reasoning for testing and how to write different tests.
   - how to write pure functions
   - made the to-do app look pretty
+  - we got a score of 100% accessbility.
  
  ### what we struggled with: 
  - At first we were unable to pass 1 test and that was for the markTodo.
  - we all struggled with the rendering the DOM, which meant we ran out of time to make the markTodo function work. 
- - we should have made it responsive.
+ - we should have made it more responsive
   
   
  
