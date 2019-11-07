@@ -33,7 +33,10 @@ h2 {
 
 ul {
   list-style-type: none;
+  line-height: 3rem;
+  
 }
+
 
 section {
   margin: 0 auto;
@@ -67,6 +70,8 @@ section {
 }
 
 .delete {
+  position:relative;
+  top:5px;
   border: none;
   height: 25px;
   width: 25px;
@@ -100,4 +105,7 @@ section {
   body, .task-input-box{
     font-size: 0.9rem;
   }
+
 }
+
+
