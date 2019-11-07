@@ -33,6 +33,30 @@ let newObjId = {
   id: null
 };
 
+let deleteTest = [
+  {
+    description: 'Go to the shops',
+    done: false,
+    id: 1
+  },
+  {
+    description: 'Make tea for Jamie',
+    done: false,
+    id: 2
+  },
+  {
+    description: 'Text Nikke',
+    done: true,
+    id: 3
+  }
+];
+
+let deleteObj = {
+  description: 'Text Nikke again',
+  done: true,
+  id: 3
+};
+
 test('Example test', function(t) {
   t.pass();
   t.end();
@@ -97,5 +121,28 @@ test('adds an id to each item', function(t) {
   let actual = todoFunctions.addTodo(noIds, newObjId);
   
   t.deepEqual(actual, expected, 'addTodo add an id to each item');
+  t.end();
+})
+
+test('checks idToDelete', function(t) {
+  let expected = [
+    {
+      description: 'Go to the shops',
+      done: false,
+      id: 1
+    },
+    {
+      description: 'Make tea for Jamie',
+      done: false,
+      id: 2
+    },
+    {
+      description: 'Text Nikke',
+      done: true,
+      id: 3
+    }
+  ];
+  let actual = todoFunctions.deleteTodo(deleteTest);
+  t.deepEqual(actual, expected, 'should return a new version without afecting the old obj');
   t.end();
 })
