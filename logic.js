@@ -32,8 +32,8 @@ var todoFunctions = {
 
     
     addTodo: function(todos, newTodo) {
-      newTodo.id = todoFunctions.generateId();
-      let newArr = todoFunctions.cloneArrayOfObjects(todos);
+      newTodo.id = this.generateId();
+      let newArr = this.cloneArrayOfObjects(todos);
       return newArr.concat(newTodo);
       // should leave the input argument todos unchanged (you can use cloneArrayOfObjects)
       // returns a new array, it should contain todos with the newTodo added to the end.
@@ -43,6 +43,9 @@ var todoFunctions = {
 
     },
     deleteTodo: function(todos, idToDelete) {
+      let newArr2 = this.cloneArrayOfObjects(todos);
+      //let filtered = newArr2.filter( x => x.id !== idToDelete )
+      return newArr2;
       // should leave the input argument todos unchanged (you can use cloneArrayOfObjects)
       // return a new array, this should not contain any todo with an id of idToDelete
       // hint: array.filter
