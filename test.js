@@ -214,28 +214,28 @@ let markThis = {
   id: 2
 }
 
-test('checks markTodo versions', function(t) {
-  let expected = [
-    {
-      description: 'Go to the shops',
-      done: false,
-      id: 1
-    },
-    {
-      description: 'Make tea for Jamie',
-      done: false,
-      id: 2
-    },
-    {
-      description: 'Text Nikke',
-      done: false,
-      id: 3
-    }
-  ];
-  let actual = todoFunctions.deleteTodo(arrayToMark);
-  t.deepEqual(actual, expected, 'markTodo array should return a new version of the arr');
-  t.end();
-})
+// test('checks markTodo versions', function(t) {
+//   let expected = [
+//     {
+//       description: 'Go to the shops',
+//       done: false,
+//       id: 1
+//     },
+//     {
+//       description: 'Make tea for Jamie',
+//       done: false,
+//       id: 2
+//     },
+//     {
+//       description: 'Text Nikke',
+//       done: false,
+//       id: 3
+//     }
+//   ];
+//   let actual = todoFunctions.markTodo(arrayToMark);
+//   t.deepEqual(actual, expected, 'markTodo array should return a new version of the arr');
+//   t.end();
+// })
 
 test('checks markTodo ids', function(t) {
   let expected = [
@@ -255,7 +255,7 @@ test('checks markTodo ids', function(t) {
       id: 3
     }
   ];
-  let actual = todoFunctions.deleteTodo(arrayToMark, markThis);
+  let actual = todoFunctions.markTodo(arrayToMark, 2);
   t.deepEqual(actual, expected, 'markTodo array should return unchanged elem except the id: idToMark');
   t.end();
 })
