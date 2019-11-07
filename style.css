@@ -3,6 +3,8 @@ body {
   background-color: #6ecc82;
   text-align: center;
   align-content: center;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.3rem;
 }
 
 h1 {
@@ -14,6 +16,7 @@ h1 {
 h2 {
   font-family: 'Mansalva', cursive;
   font-size: 2rem;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.2);
 }
 
 .red {
@@ -48,16 +51,18 @@ section {
   max-width: 400px;
   border-radius: 8px;
   font-size: 1rem;
+  font-family: 'Quicksand', sans-serif;
 }
 
 .add-button {
   margin-left: 20px;
   padding: 10px;
   background: #639bc9;
-  color: white;
+  color: black;
   border-radius: 10px;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
   font-size: 1rem;
+  font-family: 'Mansalva';
 }
 
 .delete {
@@ -65,6 +70,8 @@ section {
   height: 50px;
   width: 50px;
   background-color: red;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 .marked {
@@ -79,4 +86,16 @@ section {
   height: 50px;
   width: 50px;
   background-color: black;
+}
+
+@media screen and (max-width: 320px) {
+  h1 {
+    font-size: 3rem;
+  }
+  h2 {
+    font-size: 1.7rem;
+  }
+  body, .task-input-box{
+    font-size: 0.9rem;
+  }
 }
