@@ -52,12 +52,16 @@ var todoFunctions = {
     },
     markTodo: function(todos, idToMark) {
       let newArr3 = this.cloneArrayOfObjects(todos);
-      let mapped = newArr3.map(function(){
-        if (todos.id == idToMark) {
-          todos.done == true;
-        };
-      });
-      return mapped;
+      for (let i = 0; i < newArr3.length; i++) {
+        if (newArr3[i].id == idToMark) {
+          if (newArr3[i].done == false) {newArr3[i].done = true;}
+          else{
+            newArr3[i].done = false;
+          }
+        }
+      }
+      return newArr3;
+      
       // should leave the input argument todos unchanged (you can use cloneArrayOfObjects)
       // in the new todo array, all elements will remain unchanged except the one with id: idToMark
       // this element will have its done value toggled
@@ -68,7 +72,7 @@ var todoFunctions = {
       // should leave the input arguement todos unchanged (you can use cloneArrayOfObjects)
       // sortFunction will have same signature as the sort function in array.sort
       // hint: array.slice, array.sort
-    },
+    }
   };
   
   
