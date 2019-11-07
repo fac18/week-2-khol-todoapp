@@ -23,6 +23,8 @@ To-do app
 - view the tasks I have added in a list so that I can plan my day &#x2611;
 - mark tasks as complete so that I can focus on the tasks I have left 
 
+![hard day](https://media.giphy.com/media/hrk8ehR4lCZ27FtjPA/giphy.gif)
+
 ### our stretch goals 
 - we were not able to achieve any of our stretch goals
 
