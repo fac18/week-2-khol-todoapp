@@ -49,6 +49,7 @@
 
       // this adds the delete button
       var deleteButtonNode = document.createElement('button');
+      deleteButtonNode.setAttribute("aria-label", "Delete button");
       deleteButtonNode.addEventListener('click', function(event) {
         var newState = todoFunctions.deleteTodo(state, todo.id);
         update(newState);
