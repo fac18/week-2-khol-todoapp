@@ -69,17 +69,6 @@ section {
   font-family: 'Mansalva';
 }
 
-/* Styles for buttons are too repetitive - we need to group them */
-/* .buttons-style {
-  position:relative;
-  top:5px;
-  border: none;
-  height: 25px;
-  width: 25px;
-  background-size: 25px;
-  margin-left: 1rem;
-  margin-right: 1rem;
-} */
 
 .delete {
   position:relative;
@@ -103,10 +92,7 @@ section {
   background-size: 25px;
   margin-left: 1rem;
   margin-right: 1rem;
-  /* border: 2px;
-  height: 50px;
-  width: 50px;
-  background-color: green; */
+  
 }
 
 .unmarked {
@@ -119,10 +105,7 @@ section {
   background-size: 25px;
   margin-left: 1rem;
   margin-right: 1rem;
-  /* border: 2px;
-  height: 50px;
-  width: 50px;
-  background-color: black; */
+  
 }
 
 @media screen and (max-width: 320px) {

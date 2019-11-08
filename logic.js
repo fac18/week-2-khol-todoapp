@@ -39,9 +39,7 @@ var todoFunctions = {
       ]);
       return result;
       
-      // newTodo.id = this.generateId();
-      // let newArr = this.cloneArrayOfObjects(todos);
-      // return newArr.concat(newTodo);
+
 
       // should leave the input argument todos unchanged (you can use cloneArrayOfObjects)
       // returns a new array, it should contain todos with the newTodo added to the end.
