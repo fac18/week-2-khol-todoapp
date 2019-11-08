@@ -7,7 +7,7 @@
     var addTodoForm = document.getElementById('add-todo');
   
     var state = [
-      { id: -3, description: 'Never push to master' }
+      { id: -3, description: 'Never push to master', done: false}
     ]; // this is our initial todoList
   
     // This function takes a todo, it returns the DOM node representing that todo
