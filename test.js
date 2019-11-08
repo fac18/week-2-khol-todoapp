@@ -6,19 +6,12 @@ test('Example test', function(t) {
   t.end();
 });
 
-test('doubles value', function(t) {
-  let expected = 6;
-  let actual = todoFunctions.double(3);
-  t.equal(actual, expected, 'the number should be 6');
-  t.end();
-})
-
 // Instead of expecting the added item to display a fresh id - eg 4, assume that
 // as it is the first ADDED item it will have id of 1
 // This is because the generate id function is called only on NEW items
 // and not on our fake populated object list.
 
-let testArray = [
+const testArray = [
   {
     description: 'Go to the shops',
     done: false,
@@ -36,11 +29,11 @@ let testArray = [
   }
 ];
 
-let newObj = "Say hi Ayub";
+const newObj = "Say hi Ayub";
 
 
 test('returns testArray with an additional item', function(t) {
-  let expected = [
+  const expected = [
     {
       description: 'Go to the shops',
       done: false,
@@ -62,7 +55,7 @@ test('returns testArray with an additional item', function(t) {
       id: 1
   }
   ];
-  let actual = todoFunctions.addTodo(testArray, newObj);
+  const actual = todoFunctions.addTodo(testArray, newObj);
   
   t.deepEqual(actual, expected, 'addTodo should return testArray with a new item');
   t.end();
@@ -75,26 +68,26 @@ test('returns testArray with an additional item', function(t) {
 // For whatever reason the generate id function reiterates on each test so the expected id is 2...
 // This is fine as we can expect to add new items from zero, so the function should work properly?
 
-let noIds = [];
+const noIds = [];
 
-let newObjId = 'Say hi Ayub'
+const newObjId = 'Say hi Ayub'
 
 
 test('adds an id to each item', function(t) {
-  let expected = [
+  const expected = [
       {
         description: 'Say hi Ayub',
         done: false,
         id: 2
       }
   ];
-  let actual = todoFunctions.addTodo(noIds, newObjId);
+  const actual = todoFunctions.addTodo(noIds, newObjId);
   
   t.deepEqual(actual, expected, 'addTodo add an id to each item');
   t.end();
 })
 
-let deleteTest = [
+const deleteTest = [
   {
     description: 'Go to the shops',
     done: false,
@@ -112,14 +105,14 @@ let deleteTest = [
   }
 ];
 
-let deleteObj = {
+const deleteObj = {
   description: 'Text Nikke again',
   done: true,
   id: 3
 };
 
 test('checks idToDelete', function(t) {
-  let expected = [
+  const expected = [
     {
       description: 'Go to the shops',
       done: false,
@@ -136,12 +129,12 @@ test('checks idToDelete', function(t) {
       id: 3
     }
   ];
-  let actual = todoFunctions.deleteTodo(deleteTest);
+  const actual = todoFunctions.deleteTodo(deleteTest);
   t.deepEqual(actual, expected, 'should return a new version without afecting the old obj');
   t.end();
 })
 
-let arrayToFilter = [
+const arrayToFilter = [
   {
     description: 'Go to the shops',
     done: false,
@@ -159,14 +152,14 @@ let arrayToFilter = [
   }
 ];
 
-let filterThis = {
+const filterThis = {
     description: 'Make tea for Jamie',
     done: true,
     id: 2
 }
 
 test('checks idToDelete ids', function(t) {
-  let expected = [
+  const expected = [
     {
       description: 'Go to the shops',
       done: false,
@@ -178,13 +171,13 @@ test('checks idToDelete ids', function(t) {
       id: 3
     }
   ];  
-  let actual = todoFunctions.deleteTodo(arrayToFilter, 2);
+  const actual = todoFunctions.deleteTodo(arrayToFilter, 2);
   t.deepEqual(actual, expected, 'idToDelete should filter the ids to not be equal');
   t.end();
 })
 
 
-let arrayToMark = [
+const arrayToMark = [
   {
     description: 'Go to the shops',
     done: false,
@@ -202,7 +195,7 @@ let arrayToMark = [
   }
 ];
 
-let markThis = {
+const markThis = {
   description: 'Make tea for Jamie',
   done: false,
   id: 2
@@ -211,7 +204,7 @@ let markThis = {
 
 
 test('checks markTodo ids', function(t) {
-  let expected = [
+  const expected = [
     {
       description: 'Go to the shops',
       done: false,
@@ -228,7 +221,7 @@ test('checks markTodo ids', function(t) {
       id: 3
     }
   ];
-  let actual = todoFunctions.markTodo(arrayToMark, 2);
+  const actual = todoFunctions.markTodo(arrayToMark, 2);
   t.deepEqual(actual, expected, 'markTodo array should return unchanged elem except the id: idToMark');
   t.end();
 })
