@@ -68,6 +68,8 @@ section {
   cursor: pointer;
 }
 
+/* Button styling below */
+
 .delete {
   position:relative;
   top:5px;
@@ -122,6 +124,8 @@ button.unmarked {
 button.marked {
   float: right;
 }
+
+/* And for small screens... */
 
 @media screen and (max-width: 600px) {
   h1 {
