@@ -21,7 +21,7 @@ To-do app
 ## User stories completed 
 - Enter tasks I need to do into a web page so that I don't forget them &#x2611;
 - View the tasks I have added in a list so that I can plan my day &#x2611;
-- Mark tasks as complete so that I can focus on the tasks I have left 
+- Mark tasks as complete so that I can focus on the tasks I have left &#x2611;
 
 ![hard day](https://media.giphy.com/media/hrk8ehR4lCZ27FtjPA/giphy.gif)
 
@@ -59,8 +59,9 @@ npm test
  
  ### What we struggled with: 
  - At first we were unable to pass 1 test and that was for the markTodo.
- - We all struggled with the rendering the DOM, which meant we ran out of time to make the markTodo function work. 
+ - We all struggled with the rendering the DOM, it took some time to work out how the premade functions related to one another
  - We should have made it more responsive.
+ - Having one team member working remotely made us reconsider the way we worked, and created challenges in dividing up tasks and keeping each other updated with the logic of the challenge.
  
 ### Accessibility screenshot:
 
