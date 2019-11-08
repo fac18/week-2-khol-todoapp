@@ -24,12 +24,6 @@ var todoFunctions = {
         return JSON.parse(JSON.stringify(todo));
       });
     },
-
-    
-    double: function(num) {
-      return num * 2;
-    },
-
     
     addTodo: function(todos, newTodo) {
       let id = this.generateId();
@@ -38,15 +32,10 @@ var todoFunctions = {
         { description: newTodo, done: false, id: id }
       ]);
       return result;
-      
-
-
       // should leave the input argument todos unchanged (you can use cloneArrayOfObjects)
       // returns a new array, it should contain todos with the newTodo added to the end.
       // add an id to the newTodo. You can use the generateId function to create an id.
       // hint: array.concat
-      
-
     },
     deleteTodo: function(todos, idToDelete) {
       let newArr2 = this.cloneArrayOfObjects(todos);
@@ -67,7 +56,6 @@ var todoFunctions = {
         }
       }
       return newArr3;
-      
       // should leave the input argument todos unchanged (you can use cloneArrayOfObjects)
       // in the new todo array, all elements will remain unchanged except the one with id: idToMark
       // this element will have its done value toggled
@@ -80,7 +68,6 @@ var todoFunctions = {
       // hint: array.slice, array.sort
     }
   };
-  
   
   // Why is this if statement necessary?
   // The answer has something to do with needing to run code both in the browser and in Node.js

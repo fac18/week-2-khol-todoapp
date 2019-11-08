@@ -22,6 +22,7 @@
 
       // add markTodo button
       let markTodoButton = document.createElement("button");
+      markTodoButton.setAttribute("aria-label", "Check button");
       if(todo.done){
           markTodoButton.classList.add('marked');
           span.setAttribute("style", "text-decoration: line-through;")
@@ -33,39 +34,6 @@
         update(newState);
       });
       todoNode.appendChild(markTodoButton);
-
-      // R
-      // todoNode.textContent = todo.description;
-      // let markTodoButtonNode = document.createElement("button");
-      // markTodoButtonNode.addEventListener('click', function(event) {
-      //   let newState = todoFunctions.markTodo(state, todo.id);
-      //   update(newState);
-      //   if (todo.done) {
-      //     markTodoButtonNode.classList.add('.marked');
-      //     markTodoButtonNode.setAttribute("aria-label", "Mark as not done");
-      //     todoSpan.style.textDecoration = "line-through";
-      //   } else {
-      //     markTodoButtonNode.classList.add('.unmarked');
-      //   }
-      // });
-      // todoNode.appendChild(markTodoButtonNode);
-      
-      // J
-      // add markTodo button
-      // let markTodoButton = document.createElement('button');
-      // markTodoButton.addEventListener('click', function(event) {
-      //   let newState = todoFunctions.markTodo(state, todo.id);
-      //   update(newState);
-      // });
-
-      // if (state.done == true) {
-      //   markTodoButton.className = "marked";
-      // } else {
-      //   markTodoButton.className = "unmarked";
-      // };
-  
-      // todoNode.appendChild(markTodoButton);
-
 
       // this adds the delete button
       var deleteButtonNode = document.createElement('button');
