@@ -22,39 +22,42 @@ let testArray = [
   {
     description: 'Go to the shops',
     done: false,
-    id: null
+    id: 0
   },
   {
     description: 'Make tea for Jamie',
     done: false,
-    id: null
+    id: 0
   },
   {
     description: 'Text Nikke',
     done: false,
-    id: null
+    id: 0
   }
 ];
 
-let newObj = "Say hi Ayub";
-
+let newObj = {
+  description: 'Say hi Ayub',
+  done: false,
+  id: 0
+};
 
 test('returns testArray with an additional item', function(t) {
   let expected = [
     {
       description: 'Go to the shops',
       done: false,
-      id: null
+      id: 0
     },
     {
       description: 'Make tea for Jamie',
       done: false,
-      id: null
+      id: 0
     },
     {
       description: 'Text Nikke',
       done: false,
-      id: null
+      id: 0
     }, 
     {
       description: 'Say hi Ayub',
@@ -77,8 +80,11 @@ test('returns testArray with an additional item', function(t) {
 
 let noIds = [];
 
-let newObjId = 'Say hi Ayub'
-
+let newObjId = {
+  description: 'Say hi Ayub',
+  done: false,
+  id: 0
+};
 
 test('adds an id to each item', function(t) {
   let expected = [
@@ -208,7 +214,28 @@ let markThis = {
   id: 2
 }
 
-
+// test('checks markTodo versions', function(t) {
+//   let expected = [
+//     {
+//       description: 'Go to the shops',
+//       done: false,
+//       id: 1
+//     },
+//     {
+//       description: 'Make tea for Jamie',
+//       done: false,
+//       id: 2
+//     },
+//     {
+//       description: 'Text Nikke',
+//       done: false,
+//       id: 3
+//     }
+//   ];
+//   let actual = todoFunctions.markTodo(arrayToMark);
+//   t.deepEqual(actual, expected, 'markTodo array should return a new version of the arr');
+//   t.end();
+// })
 
 test('checks markTodo ids', function(t) {
   let expected = [
