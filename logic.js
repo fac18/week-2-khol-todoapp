@@ -26,11 +26,6 @@ var todoFunctions = {
     },
 
     
-    double: function(num) {
-      return num * 2;
-    },
-
-    
     addTodo: function(todos, newTodo) {
       let id = this.generateId();
       let newArr = this.cloneArrayOfObjects(todos);
