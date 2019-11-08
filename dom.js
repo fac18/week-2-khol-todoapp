@@ -1,6 +1,18 @@
 // part 2 linking it all together
 // The function here is called an iife,
 // it keeps everything inside hidden from the rest of our application
+
+// THE FUNCTIONS IN THIS DOC ARE NOT NECESSARILY IN A SENSIBLE ORDER. THE MAIN DIFFICULTY
+// IS WORKING OUT HOW EACH RELATES TO ONE ANOTHER.
+
+// My advice would be to highlight the variable and argument names and look where else
+// they come up...that way you can see which functions call the returns of others
+// hint... the bottom three functions are very important!
+
+// The functions we wrote here are mainly to append items to the DOM.
+// The added items which are buttons need event listeners to do their own functions
+// such as delete item, mark item etc.
+
 (function() {
     // This is the dom node where we will keep our todo
     var container = document.getElementById('todo-container');
