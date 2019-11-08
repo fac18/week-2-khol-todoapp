@@ -34,9 +34,7 @@ h2 {
 ul {
   list-style-type: none;
   line-height: 3rem;
-  
 }
-
 
 section {
   margin: 0 auto;
@@ -67,8 +65,8 @@ section {
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
   font-size: 1rem;
   font-family: 'Mansalva';
+  cursor: pointer;
 }
-
 
 .delete {
   position:relative;
@@ -78,8 +76,12 @@ section {
   width: 25px;
   background-image:url('img/x-button.png');
   background-size: 25px;
-  margin-left: 1rem;
-  margin-right: 1rem;
+  margin-left: 0.5rem;
+}
+
+.delete:hover {
+  background-color: red;
+  cursor: pointer;
 }
 
 .marked {
@@ -90,9 +92,7 @@ section {
   width: 25px;
   background-image:url('img/smile.png');
   background-size: 25px;
-  margin-left: 1rem;
-  margin-right: 1rem;
-  
+  margin-left: 0.5rem;
 }
 
 .unmarked {
@@ -103,12 +103,15 @@ section {
   width: 25px;
   background-image:url('img/checked.png');
   background-size: 25px;
-  margin-left: 1rem;
-  margin-right: 1rem;
-  
+  margin-left: 0.5rem;
 }
 
-@media screen and (max-width: 320px) {
+.unmarked:hover {
+  background-color: #5cc478;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
   h1 {
     font-size: 3rem;
   }
@@ -118,7 +121,6 @@ section {
   body, .task-input-box{
     font-size: 0.9rem;
   }
-
 }
 
 
