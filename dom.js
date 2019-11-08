@@ -22,6 +22,7 @@
 
       // add markTodo button
       let markTodoButton = document.createElement("button");
+      markTodoButton.setAttribute("aria-label", "Check button");
       if(todo.done){
           markTodoButton.classList.add('marked');
           span.setAttribute("style", "text-decoration: line-through;")
