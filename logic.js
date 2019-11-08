@@ -3,7 +3,7 @@
 // you can access these on todo.todoFunctions
 // For part one we expect you to use tdd
 
-// We have here an object containing several functions functions
+// We have here an object containing several functions 
 
 var todoFunctions = {
     // todoFunctions.generateId() will give you a unique id
